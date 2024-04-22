@@ -9,11 +9,12 @@ if __name__ == "__main__":
     if (len(sys.argv) < 2):
         print("Please enter user id")
         sys.exit()
+    link = 'https://jsonplaceholder.typicode.com'
 
-    user = requests.get(f'https://jsonplaceholder.typicode.com/users/\
-                        {sys.argv[1]}').json()
-    userTodo = requests.get(f'https://jsonplaceholder.typicode.com/todos\
-                            ?userId={sys.argv[1]}').json()
+    user = requests.get('{0}/users/{1}'
+                        .format(link, sys.argv[1])).json()
+    userTodo = requests.get('{0}/todos?{1}={2}'
+                            .format(link, "userId", sys.argv[1])).json()
 
     done = sum(1 for todo in userTodo if todo['completed'])
     tasks = len(userTodo)
