@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Requesting data from rest api
+"""
 import requests
 import sys
 
@@ -24,4 +27,3 @@ print(f"Employee {user['name']} is done with tasks ({done}/{tasks}):")
 for task in usersTodos:
     if task['completed']:
         print(f"\t {task['title']}")
-
