@@ -2,7 +2,6 @@
 """
 Requesting data from rest api
 """
-from sys import argv
 import json
 import requests
 

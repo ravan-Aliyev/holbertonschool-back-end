@@ -2,9 +2,9 @@
 """
 Requesting data from rest api
 """
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     if (len(sys.argv) < 2):
