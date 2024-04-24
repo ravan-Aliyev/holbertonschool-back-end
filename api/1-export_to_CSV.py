@@ -21,7 +21,7 @@ if __name__ == "__main__":
     csvFormat = []
 
     for data in userTodo:
-        arr = [f"{data['userId']}", f"{user['name']}",
+        arr = [f"{data['userId']}", f"{user['username']}",
                f"{data['completed']}", f"{data['title']}"]
         csvFormat.append(arr)
 
