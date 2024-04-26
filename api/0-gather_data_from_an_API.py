@@ -21,6 +21,7 @@ if __name__ == "__main__":
 
     print("Employee {0} is done with tasks ({1}/{2}):"
           .format(user['name'], done, tasks))
+
     for task in userTodo:
         if task['completed']:
-            print("\t {0}".format(task['title']))
+            print(" \t{0}".format(task['title']))
